@@ -49,7 +49,7 @@ def check_commit_message():
 				if is_smeetz:
 					print("check Smeetz roles has to be applied as well")
 				sys.exit(1)
-	print("✔ commit is clean 👏 👏 👏 👏 ")
+	print("✔ Good job! commit is good 👏 👏 👏 👏 ")
 	sys.exit(0)
 
 
