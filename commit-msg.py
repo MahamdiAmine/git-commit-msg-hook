@@ -46,6 +46,8 @@ def check_commit_message():
 			if not _is_valid_line(idx, line, is_smeetz=is_smeetz):
 				print(_ROLES)
 				print(" you idiot😕, Can't you just write a propre git commit🤦.")
+				if is_smeetz:
+					print("check Smeetz roles has to be applied as well")
 				sys.exit(1)
 	print("✔ commit is clean 👏 👏 👏 👏 ")
 	sys.exit(0)
@@ -60,6 +62,10 @@ def _is_valid_line(idx, line, is_smeetz):
 	"""
 
 	if idx == 0:
+        # automatic merge commit
+		if 'Merge branch ' in line:
+			return True
+
 		if not re.match("^[A-Z].{,48}[0-9A-z \t]$", line):
 			return False
 
