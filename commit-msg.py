@@ -71,7 +71,7 @@ def _is_valid_line(idx, line, is_smeetz):
 
 		# if it's Smeetz repo, it has to start with the ticket's ID 🤷
 		if is_smeetz:
-			return re.match(r"^(BUD|IBO)-\d{3}", line)
+			return re.match(r"^(BUD|IBO|L2|L3|BOO)-\d{2}", line)
 		return True
 
 	elif idx == 1:
